@@ -5,7 +5,7 @@ module.exports = {
   reverseGeocode: reverseGeocode
 };
 
-function gecode(address, callback) {
+function geocode(address, callback) {
   geocode(address, function(coordinates) {
     callback(coordinates);
   });
