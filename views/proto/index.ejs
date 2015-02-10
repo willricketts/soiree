@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#loginLink").click(function() {
+            $.get('http://localhost:1337/', function(data) {
+                alert(data);
+            });
+        });
+    });
+</script>
+<div class="controlBox">
+    <a href="#" id="loginLink">Login</a>
+</div>
+<div id='map' class="dark"></div>
+
+<script>
+    L.mapbox.accessToken = 'pk.eyJ1Ijoid2lsbHJpY2tldHRzIiwiYSI6InFHdURuSTQifQ.vluZVy9teTvljRl1Om_wZg';
+    var map = L.mapbox.map('map', 'willricketts.57c1047d').setView([34.0058955, -84.3413478], 13);
+</script>
