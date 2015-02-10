@@ -9,6 +9,32 @@ module.exports = {
 
   attributes: {
 
+    firstName: {
+      type: 'string',
+      required: true
+    },
+
+    lastName: {
+      type: 'string',
+      required: true
+    },
+
+    emailAddress: {
+      type: 'email',
+      required: true,
+      unique: true
+    },
+
+    active: {
+      type: 'boolean',
+      defaultsTo: true
+    },
+
+    admin: {
+      type: 'boolean',
+      defaultsTo: false
+    }
+
   }
 };
 
