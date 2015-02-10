@@ -6,7 +6,8 @@
 */
 
 module.exports = {
-
+  connection: 'mongo',
+  schema: true,
   attributes: {
     title: {
       type: 'string',

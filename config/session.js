@@ -21,7 +21,7 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
-  secret: '6750e1cd16ad728bc974d56d84b2ed42'
+  secret: '6750e1cd16ad728bc974d56d84b2ed42',
 
 
   /***************************************************************************
@@ -41,7 +41,7 @@ module.exports.session = {
   * session store that can be shared across multiple Sails.js servers        *
   ***************************************************************************/
 
-  // adapter: 'redis',
+  adapter: 'redis',
 
   /***************************************************************************
   *                                                                          *
@@ -52,10 +52,10 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  // host: 'localhost',
-  // port: 6379,
+  host: 'localhost',
+  port: 6379,
   // ttl: <redis session TTL in seconds>,
-  // db: 0,
+  db: 0
   // pass: <redis auth password>,
   // prefix: 'sess:',
 

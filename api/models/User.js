@@ -6,9 +6,9 @@
 */
 
 module.exports = {
-
+  connection: 'mongo',
+  schema: true,
   attributes: {
-
     firstName: {
       type: 'string',
       required: true
