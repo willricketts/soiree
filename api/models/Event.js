@@ -8,7 +8,28 @@
 module.exports = {
 
   attributes: {
+    title: {
+      type: 'string',
+      required: true
+    },
 
+    description: {
+      type: 'text',
+      required: true
+    },
+
+    latitude: {
+      type: 'float',
+      required: true
+    },
+
+    longitude: {
+      type: 'float'
+    },
+
+    owner: {
+      model: 'user'
+    }
   }
 };
 

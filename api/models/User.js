@@ -33,6 +33,11 @@ module.exports = {
     admin: {
       type: 'boolean',
       defaultsTo: false
+    },
+
+    events: {
+      collection: 'event',
+      via: 'owner'
     }
 
   }
