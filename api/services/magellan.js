@@ -1,17 +1,17 @@
 var geotools = require('geo-tools');
 
 module.exports = {
-  geocode: geocode,
-  reverseGeocode: reverseGeocode
+  findAddress: findAddress,
+  findCoords: findCoords
 };
 
-function geocode(address, callback) {
+function findAddress(address, callback) {
   geocode(address, function(coordinates) {
     callback(coordinates);
   });
 }
 
-function reverseGeocode(lat, lng, callback) {
+function findCoords(lat, lng, callback) {
   reverseGeocode({lat: lat, lng: lng}, function(address){
     callback(address);
   });

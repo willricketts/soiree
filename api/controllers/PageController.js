@@ -7,7 +7,7 @@
 
 module.exports = {
   index: index,
-	dashboard: dashboard
+  dashboard: dashboard
 };
 
 function index(req, res) {
@@ -15,5 +15,10 @@ function index(req, res) {
 }
 
 function dashboard(req, res) {
-  res.view();
+  Event.find(function(err, events) {
+    console.log(err);
+    console.log(events);
+    //TODO handle error
+    res.view({ events: events });
+  });
 }

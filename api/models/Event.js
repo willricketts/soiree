@@ -25,7 +25,8 @@ module.exports = {
     },
 
     longitude: {
-      type: 'float'
+      type: 'float',
+      required: true
     },
 
     owner: {
@@ -34,12 +35,12 @@ module.exports = {
 
     startTime: {
       type: 'datetime',
-      required: true
+      //required: true
     },
 
     duration: {
-      type: 'integer',
-      required: true
+      type: 'integer'
+      //required: true
     }
   }
 };
