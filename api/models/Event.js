@@ -30,6 +30,16 @@ module.exports = {
 
     owner: {
       model: 'user'
+    },
+
+    startTime: {
+      type: 'datetime',
+      required: true
+    },
+
+    duration: {
+      type: 'integer',
+      required: true
     }
   }
 };
