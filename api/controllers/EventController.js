@@ -6,8 +6,20 @@
  */
 
 module.exports = {
-	create: create
+  index: index,
+  show: show,
+	create: create,
+  update: update,
+  deactivate: deactivate
 };
+
+function index(req, res) {
+
+}
+
+function show(req, res) {
+
+}
 
 function create(req, res) {
   var p = req.params.all();
@@ -22,5 +34,13 @@ function create(req, res) {
       res.send(event);
     });
   });
+}
+
+function update(req, res) {
+
+}
+
+function deactivate(req, res) {
+
 }
 
