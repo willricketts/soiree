@@ -16,7 +16,6 @@ function index(req, res) {
 
 function dashboard(req, res) {
   Event.find(function(err, events) {
-    console.log(err);
     console.log(events);
     //TODO handle error
     res.view({ events: events });
