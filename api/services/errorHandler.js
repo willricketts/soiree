@@ -3,7 +3,7 @@ module.exports = {
   ERRORS: errors(),
   intercept: intercept
 
-}
+};
 
 function errors () {
   return {
@@ -23,12 +23,20 @@ function errors () {
 function intercept (err, object) {
   var e = false;
 
-  if (this.ERRORS[err]) { e = this.ERRORS[err]; }
-  else if (err) { e = this.ERRORS.InternalServerError; }
-  else if (!err && !object) { e = this.ERRORS.NullCollectionError; }
+  if (this.ERRORS[err]) {
+    e = this.ERRORS[err];
+  }
+  else if (err) {
+    e = this.ERRORS.InternalServerError;
+  }
+  else if (!err && !object) {
+    e = this.ERRORS.NullCollectionError;
+  }
 
   if (e) {
-    Log.create({ type: 'error', content: JSON.stringify(e) });
+    Log.create({ type: 'error', content: JSON.stringify(e) }, function(err, log) {
+      return e;
+    });
   }
 
   return e;
