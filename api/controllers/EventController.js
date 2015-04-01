@@ -30,7 +30,9 @@ function create(req, res) {
     p.longitude = coords.lng;
 
     Event.create(p, function(err, event) {
-      // handle error
+      if(err) {
+        res.send(500, err);
+      }
       res.send(event);
     });
   });
@@ -43,4 +45,3 @@ function update(req, res) {
 function deactivate(req, res) {
 
 }
-
